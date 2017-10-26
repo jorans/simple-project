@@ -19,7 +19,9 @@ pipeline{
             }
         }
         stage ('Release') {
-            sh "mvn --batch-mode release:clean release:prepare release:perform"
+            steps {
+                sh "mvn --batch-mode release:clean release:prepare release:perform"
+            }
         }
     }
 }
