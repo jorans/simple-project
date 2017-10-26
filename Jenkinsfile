@@ -12,6 +12,7 @@ pipeline{
                     echo "M2_HOME = ${M2_HOME}"
                 '''
                 echo "BUILD_ID = ${env.BUILD_ID}"
+                maven -v
             }
         }
     }
