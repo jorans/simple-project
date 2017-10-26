@@ -18,5 +18,8 @@ pipeline{
                 }
             }
         }
+        stage ('Release') {
+            sh "mvn --batch-mode release:clean release:prepare release:perform"
+        }
     }
 }
