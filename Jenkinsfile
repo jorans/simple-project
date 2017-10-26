@@ -10,8 +10,8 @@ pipeline{
                 sh '''
                     echo "PATH = ${PATH}"
                     echo "M2_HOME = ${M2_HOME}"
-                    echo "BUILD_ID = ${env.JOB_NAME}"
                 '''
+                echo "BUILD_ID = ${env.JOB_NAME}"
             }
         }
     }
