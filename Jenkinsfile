@@ -13,9 +13,6 @@ pipeline{
                 '''
                 echo "BUILD_ID = ${env.BUILD_ID}"
                 sh 'mvn -v'
-                withMaven(){
-                 mvn help:effective-settings
-                }
             }
         }
         stage ('Release') {
